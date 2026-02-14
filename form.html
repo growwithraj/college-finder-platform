@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Apply Now</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-wrapper">
+
+<div class="form-box">
+
+<h2>Submit Your Details & Get Best Guidance</h2>
+
+<form id="admissionForm">
+
+
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="tel" placeholder="Phone Number" required>
+<input type="tel" placeholder="WhatsApp Number">
+
+<select required>
+<option>Select Qualification</option>
+<option>12th Passed</option>
+<option>Graduation</option>
+<option>Post Graduation</option>
+</select>
+
+<select required>
+<option>Select Course</option>
+<option>B.Tech</option>
+<option>BCA</option>
+<option>MBA</option>
+<option>BBA</option>
+<option>MCA</option>
+<option>B.Com</option>
+<option>BA</option>
+<option>B.Sc</option>
+<option>Other</option>
+</select>
+
+<textarea placeholder="Any preferred college?"></textarea>
+
+<button class="submit-btn">Submit Application</button>
+
+</form>
+
+</div>
+</div>
+<script>
+document.getElementById("admissionForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    fetch("https://script.google.com/macros/s/AKfycbzOAffDtVGlSkQ8x-hNRKio18i8rzvF0KKHy35iQWmuRMDpjvO3rq5tT5WA1WAjTkSBxA/exec", {
+        method: "POST",
+        body: JSON.stringify({
+            name: this[0].value,
+            email: this[1].value,
+            phone: this[2].value,
+            whatsapp: this[3].value,
+            qualification: this[4].value,
+            course: this[5].value,
+            message: this[6].value
+        })
+    })
+    .then(res => {
+        window.location.href = "thankyou.html";
+    });
+});
+</script>
+
+</body>
+</html>
