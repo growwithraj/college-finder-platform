@@ -751,3 +751,22 @@ header nav a {
     height: 55px;
 }
 
+header {
+    height: 80px; /* fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background: white;
+}
+
+
+.logo img {
+    height: 80px;
+    width: auto;
+    max-width: 220px;
+    object-fit: contain;
+}
+
+
+
