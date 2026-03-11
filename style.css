@@ -288,6 +288,21 @@ footer .privacy-link:hover {
 
 }
 
-.logo img{
-  height:40px;
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
 }
+
+.logo img{
+  height: 40px;
+  width: auto;
+}
+
+.logo span{
+  font-size: 24px;
+  font-weight: 700;
+  color: #ff0000;
+}
+
