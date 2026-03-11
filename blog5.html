@@ -154,6 +154,29 @@
       color: #FFD700;
     }
 
+    @media (max-width:768px){
+
+nav ul{
+  display:none;
+  position:absolute;
+  top:60px;
+  right:0;
+  background:#111;
+  flex-direction:column;
+  width:200px;
+  padding:20px;
+}
+
+nav ul.show{
+  display:flex;
+}
+
+.hamburger{
+  display:flex;
+}
+
+}
+
   </style>
 </head>
 <body>
@@ -312,3 +335,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
