@@ -75,6 +75,22 @@
       background-color: #333;
     }
 
+    /* Table responsive wrapper */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1a1a1a;
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 600px; /* ensures horizontal scroll on mobile */
+}
+
     @media (max-width:768px){
       th, td {
         padding: 12px;
@@ -121,6 +137,7 @@
     </ul>
 
     <h3>Sample College Awareness Table</h3>
+<div class="table-wrapper">
     <table>
       <tr>
         <th>College Name</th>
@@ -153,7 +170,7 @@
         <td>Encourages innovation, affordable fees</td>
       </tr>
     </table>
-
+</div>
     <p style="margin-top:20px;">The message is clear: **you don’t need to pay high fees to get quality education**. Look for colleges that focus on learning, practical experience, and career opportunities.</p>
   </section>
 </main>
@@ -165,4 +182,5 @@
 
 <script src="script.js"></script>
 </body>
+
 </html>
