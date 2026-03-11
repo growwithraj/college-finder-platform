@@ -1,3 +1,8 @@
+# robots.txt for College Finder
+
 User-agent: *
+Disallow: /admin/
+Disallow: /private/
 Allow: /
-Sitemap: https://growwithraj.github.io/sitemap.xml
+
+Sitemap: https://growwithraj.github.io/college-finder-platform/sitemap.xml
