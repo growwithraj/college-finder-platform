@@ -37,6 +37,28 @@ th{background-color:#111;}
 @media(max-width:768px){.blog-hero h1{font-size:28px;}.blog-content p,.case-study p{font-size:16px;}}
 footer{text-align:center;padding:20px;background-color:#111;color:#ccc;}
 footer a{color:#FFD700;}
+@media (max-width:768px){
+
+nav ul{
+  display:none;
+  position:absolute;
+  top:60px;
+  right:0;
+  background:#111;
+  flex-direction:column;
+  width:200px;
+  padding:20px;
+}
+
+nav ul.show{
+  display:flex;
+}
+
+.hamburger{
+  display:flex;
+}
+
+}
 </style>
 </head>
 <body>
@@ -210,3 +232,4 @@ footer a{color:#FFD700;}
 <script src="script.js"></script>
 </body>
 </html>
+
