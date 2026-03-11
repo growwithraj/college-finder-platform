@@ -36,6 +36,28 @@ table, th, td{border:1px solid #FFD700;}
 th, td{padding:10px;text-align:left;color:#ccc;}
 th{background-color:#111;}
 @media(max-width:768px){.blog-hero h1{font-size:28px;}.blog-content p,.case-study p{font-size:16px;}}
+@media (max-width:768px){
+
+nav ul{
+  display:none;
+  position:absolute;
+  top:60px;
+  right:0;
+  background:#111;
+  flex-direction:column;
+  width:200px;
+  padding:20px;
+}
+
+nav ul.show{
+  display:flex;
+}
+
+.hamburger{
+  display:flex;
+}
+
+}
 </style>
 </head>
 <body>
@@ -173,3 +195,4 @@ th{background-color:#111;}
 <script src="script.js"></script>
 </body>
 </html>
+
