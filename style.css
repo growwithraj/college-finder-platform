@@ -1,0 +1,288 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background-color: #1a1a1a;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  color: #e63946;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #e63946;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+/* HAMBURGER ANIMATION */
+.hamburger.open div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open div:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #e63946, #1a1a1a);
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* FIND COLLEGE BUTTON */
+.find-college {
+  display: inline-block;
+  background-color: #00b4d8;
+  color: #fff;
+  padding: 15px 25px;
+  margin-top: 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.find-college:hover {
+  background-color: #0096c7;
+  transform: scale(1.05);
+}
+
+/* IMPORTANCE POINTS */
+.importance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 40px auto;
+  max-width: 600px;
+}
+
+.importance div {
+  background-color: #1a1a1a;
+  border: 1px solid #e63946;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 18px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* RISE ANIMATION */
+@keyframes rise {
+  0% { opacity: 0; transform: translateY(20px); }
+  50% { opacity: 1; transform: translateY(-5px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* RESULTS SECTION */
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.card {
+  background-color: #1a1a1a;
+  border: 1px solid #e63946;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* FOOTER */
+footer {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 30px;
+  margin-top: 50px;
+  border-top: 1px solid #e63946;
+}
+
+footer p {
+  color: #fff;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 200px;
+    padding: 15px;
+    border-left: 1px solid #e63946;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Privacy Policy link styling */
+footer .privacy-link {
+  color: #ff9f1c; /* bright orange to stand out */
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+footer .privacy-link:hover {
+  color: #ffd580; /* lighter orange on hover */
+  text-decoration: underline;
+}
+
+/* Discover Colleges Near You Button */
+.btn-primary {
+  display: inline-block;
+  background-color: #FFD700; /* bright gold/yellow */
+  color: #1a1a1a;           /* dark text for contrast */
+  font-size: 26px;           /* big text */
+  font-weight: 800;
+  padding: 22px 50px;        /* larger clickable area */
+  border-radius: 14px;       /* smooth rounded corners */
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 6px 25px rgba(255, 215, 0, 0.5); /* subtle glow */
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #FFEA70;  /* lighter yellow on hover */
+  transform: scale(1.08);     /* slight zoom effect */
+  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.7); /* stronger glow */
+}
+
+/* Contact form confirmation message */
+.contact-confirm {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  background-color: #1a1a1a;
+  color: #fff;
+  border-left: 6px solid #FFD700;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.7);
+  z-index: 9999;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.contact-confirm h3 {
+  margin-bottom: 10px;
+  color: #FFD700;
+}
+
+.contact-confirm p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.contact-confirm .close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #FFD700;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translate(-50%, -30%);}
+  100% {opacity: 1; transform: translate(-50%, -20%);}
+}
