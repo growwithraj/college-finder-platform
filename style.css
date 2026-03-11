@@ -285,4 +285,9 @@ footer .privacy-link:hover {
 @keyframes fadeIn {
   0% {opacity: 0; transform: translate(-50%, -30%);}
   100% {opacity: 1; transform: translate(-50%, -20%);}
+
+}
+
+.logo img{
+  height:40px;
 }
